@@ -34,18 +34,11 @@ $result=$mysqli -> query("select * from transfer");
       <link rel="stylesheet" href="css/owl.carousel.min.css">
       <link rel="stylesheet" href="css/owl.theme.default.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
-      <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+      
    </head>
    <!-- body -->
    <body class="main-layout about_pape">
-      <!-- loader  
-      <div class="loader_bg">
-         <div class="loader"><img src="images/loading.gif" alt="#" /></div>
-      </div>
-      <!-- end loader -->
-      <!-- header -->
+      
       <header class="section">
          <!-- header inner -->
         <div class="header_main">
@@ -78,9 +71,10 @@ $result=$mysqli -> query("select * from transfer");
             <table class="table table-hover table-bordered">
                 <thead>
                     <tr class="table-danger">
-                        <th scope="col">sendar</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">sender</th>
                         <th scope="col">receiver</th>
-                        <th scope="col">amount</th>
+                        <th scope="col">amount($)</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -89,6 +83,7 @@ $result=$mysqli -> query("select * from transfer");
 						{
 					?>
 						<tr>
+						    <td><?php echo $rows['date']; ?></td>
 							<td><?php echo $rows['sendar']; ?></td>
 							<td><?php echo $rows['receiver']; ?></td>
 							<td><?php echo $rows['amount']; ?></td>
