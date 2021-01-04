@@ -18,7 +18,7 @@
 		}
 		else
 		{
-			echo '<script>alert("Sender amount if less. please try again.")</script>';
+			echo '<script>alert("Sender amount is less. please try again.")</script>';
 	}
 	}
 ?>
