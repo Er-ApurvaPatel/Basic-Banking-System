@@ -103,9 +103,26 @@
 
       <div class="container">
           <form action="" method="post">
-          Enter sender name :<input type="text" name="send"><br>
-          Enter receiver name :<input type="text" name="rec"><br>
-          Enter the amount:<input type="number" name="num"><br>
+          Welcome :<?php echo $_GET['name'];?><br>
+		  
+		 <input type = "hidden" value='<?php echo $_GET['name'];?>' name ="send">
+		 
+          <br>Please select receiver name :<br>
+		  <select name="rec" >
+			<option disable>select one</option>
+	<option <?php echo ($_GET['name']=='apurva')?'style = "display:none"':'style = "display:block"'; ?> value="apurva">apurva</option>
+			<option <?php echo ($_GET['name']=='Vatsal')?'style = "display:none"':'style = "display:block"'; ?>  value="Vatsal">Vatsal</option>
+			<option  <?php echo ($_GET['name']=='parth')?'style = "display:none"':'style = "display:block"'; ?> value="parth">parth</option>
+			<option <?php echo ($_GET['name']=='Jaydev')?'style = "display:none"':'style = "display:block"'; ?> value="Jaydev">Jaydev</option>
+			<option <?php echo ($_GET['name']=='Hariom')?'style = "display:none"':'style = "display:block"'; ?> value="Hariom">Hariom</option>
+			<option <?php echo ($_GET['name']=='harshil')?'style = "display:none"':'style = "display:block"'; ?>value="harshil">harshil</option>
+			<option <?php echo ($_GET['name']=='kiara')?'style = "display:none"':'style = "display:block"'; ?>value="kiara">kiara</option>
+			<option <?php echo ($_GET['name']=='Sam')?'style = "display:none"':'style = "display:block"'; ?>value="Sam">Sam</option>
+			<option <?php echo ($_GET['name']=='julia')?'style = "display:none"':'style = "display:block"'; ?>value="julia">julia</option>
+			<option <?php echo ($_GET['name']=='Ramesh')?'style = "display:none"':'style = "display:block"'; ?>value="Ramesh">Ramesh</option>
+			</select>
+		  <br>
+          <br>Enter the amount:<input type="number" name="num"><br>
           <input type="submit" name="submit" value="Submit">
           </form>
       </div>
