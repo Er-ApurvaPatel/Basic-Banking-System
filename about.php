@@ -40,8 +40,8 @@ $result=$mysqli -> query("select * from bank");
    </head>
    <!-- body -->
    <body class="main-layout about_pape">
-      <!-- loader  
-      <div class="loader_bg">
+      <!-- loader  -->
+      <!--<div class="loader_bg">
          <div class="loader"><img src="images/loading.gif" alt="#" /></div>
       </div>
       <!-- end loader -->
@@ -94,7 +94,7 @@ $result=$mysqli -> query("select * from bank");
                         <th scope="col">Sno</th>
                         <th scope="col">Name</th>
                         <th scope="col">E-mail</th>
-                        <th scope="col">Balance</th>
+                        <th scope="col">Balance($)</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -104,10 +104,10 @@ $result=$mysqli -> query("select * from bank");
 					?>
 						<tr>
 						
-							<td><?php echo $rows['Sno']; ?></td>
-							<td><a href ="transfer.php"><?php echo $rows['Name']; ?></a></td>
-							<td><?php echo $rows['E-mail']; ?></td>
-							<td><?php echo $rows['Balance']; ?></td>
+					<td><?php echo $rows['Sno']; ?></td>
+					<td><a href ="transfer.php?name=<?php echo $rows['Name']; ?>"><?php echo $rows['Name']; ?></a></td>
+					<td><?php echo $rows['E-mail']; ?></td>
+					<td><?php echo $rows['Balance']; ?></td>
 						</tr>
 					<?php 
 						}
