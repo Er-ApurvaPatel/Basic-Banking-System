@@ -9,12 +9,13 @@
 		$result2=$mysqli -> query("SELECT Balance from bank where Name ='$rname' ");
 		$rows1=mysqli_fetch_assoc($result1);
 		$rows2=mysqli_fetch_assoc($result2);
+		$date = date('Y-m-d H:i:s');
 		if (((int)$rows1['Balance']) > ((int)$num))
 		{
 		$result3=$mysqli -> query("UPDATE bank set Balance = ".(int)((int)$rows1['Balance']-(int)$num)." where Name ='$sname'");
 		$result4=$mysqli -> query("UPDATE bank set Balance = ".(int)((int)$rows2['Balance']+(int)$num)." where Name ='$rname'");
-		mysqli_select_db($mysqli,'transfer');
-		$result5=$mysqli -> query("INSERT INTO transfer VALUES('$sname','$rname',".(int)($num)." )");
+		mysqli_select_db($mysqli,'id15821514_banksystem');
+		$result5=$mysqli -> query("INSERT INTO transfer VALUES('$date','$sname','$rname',".(int)($num)." )");
 		}
 		else
 		{
@@ -52,18 +53,11 @@
       <link rel="stylesheet" href="css/owl.carousel.min.css">
       <link rel="stylesheet" href="css/owl.theme.default.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
-      <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+      
    </head>
    <!-- body -->
    <body class="main-layout about_pape">
-     
-	  <!-- loader  
-      <div class="loader_bg">
-         <div class="loader"><img src="images/loading.gif" alt="#" /></div>
-      </div>
-      <!-- end loader -->
+      
       <!-- header -->
       <header class="section">
          <!-- header inner -->
