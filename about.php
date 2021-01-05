@@ -67,8 +67,8 @@ $result=$mysqli -> query("select * from bank");
              <div class="row">
                 <div class="col-12">
                     <div class="titlepage">
-                     <h2><strong class="black"> Bank </strong> Transfer </h2>
-                     <span>We are Here To help You</span>
+                     <h2><strong class="black"> Customer </strong> List </h2>
+                     <span>Please Select any one customer</span>
                   </div>
                 </div>
              </div>
