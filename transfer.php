@@ -90,7 +90,7 @@
              <div class="row">
                 <div class="col-12">
                     <div class="titlepage">
-                     <h2><strong class="black"> Bank </strong> Transfer </h2>
+                     <h2><strong class="black"> Money </strong> Transfer </h2>
                      <span>We are Here To help You</span>
                   </div>
                 </div>
