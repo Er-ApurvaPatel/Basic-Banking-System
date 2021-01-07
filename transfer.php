@@ -10,6 +10,12 @@
 		$rows1=mysqli_fetch_assoc($result1);
 		$rows2=mysqli_fetch_assoc($result2);
 		$date = date('Y-m-d H:i:s');
+		if($rname == "select one")
+		{
+		    echo '<script>alert("Please Select any customer")</script>';
+		}
+		else
+		{
 		if (((int)$rows1['Balance']) > ((int)$num))
 		{
 		$result3=$mysqli -> query("UPDATE bank set Balance = ".(int)((int)$rows1['Balance']-(int)$num)." where Name ='$sname'");
@@ -20,6 +26,7 @@
 		else
 		{
 			echo '<script>alert("Sender amount is less. please try again.")</script>';
+	}
 	}
 	}
 ?>
