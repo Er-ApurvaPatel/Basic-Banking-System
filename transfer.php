@@ -10,7 +10,7 @@
 		$rows1=mysqli_fetch_assoc($result1);
 		$rows2=mysqli_fetch_assoc($result2);
 		$date = date('Y-m-d H:i:s');
-		if(((int)$num) < 0)
+		if(((int)$num) <= 0)
 		{
 		    echo '<script>alert("Amount Should is positive")</script>';
 		}
